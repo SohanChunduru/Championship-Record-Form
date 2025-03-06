@@ -126,7 +126,7 @@ def upload_file():
                     </style>
                 </head>
                 <body>
-                <h1>Championship Points Record Form</h1>
+                <h1>AKC Herding Trials - Championship Points Calculator</h1>
                 {% if not unique_dogs.empty %}
                     <div style="display: flex; justify-self: center; justify-content: space-between; width: 60%; align-items: center; margin-left: 50px">
                         <div></div>
@@ -173,8 +173,8 @@ def upload_file():
         <title>Championship Points Record</title>
         <style>
             body { font-family: Roboto Slab, sans-serif; text-align: center; margin: 10px; background-color: #f8f9fa; }
-            h1 { margin-top: -30px; } /* Moves the title up */
-            form { margin-top: 20px; padding: 20px; background: white; border-radius: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+            h1 { margin-top: 50px; } /* Moves the title up */
+            form { margin-top: 10px; padding: 20px; background: white; border-radius: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
             input[type="file"] { margin-bottom: 10px; }
             /* Style for both upload buttons */
             input[type="submit"], a {
@@ -194,7 +194,7 @@ def upload_file():
     </head>
     <body>
 
-        <h1>Championship Points Record Form</h1>
+        <h1>AKC Herding Trials - Championship Points Calculator</h1>
         <form action="/" method="post" enctype="multipart/form-data">
             <input type="file" name="file"><br>
             <input type="submit" value="Upload">
