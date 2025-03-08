@@ -104,8 +104,13 @@ def upload_file():
                                 color: #333; 
                             }
 
-                            h1, h2 { 
-                                color: #013594; 
+                            h1 { 
+                                color: #003366; 
+                                margin-bottom: 20px;
+                            }
+
+                            h2 {
+                                color: #013594;
                                 margin-bottom: 20px;
                             }
 
@@ -221,7 +226,7 @@ def upload_file():
         <title>Championship Points Record</title>
         <style>
             body { font-family: Roboto Slab, sans-serif; text-align: center; margin: 10px; background-color: #f8f9fa; }
-            h1 { margin-top: 50px; color:#013594}
+            h1 { margin-top: 50px; color:#003366}
             form { margin-top: 10px; padding: 20px; background: white; border-radius: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
             input[type="file"] { margin-bottom: 10px; }
             /* Style for both upload buttons */
