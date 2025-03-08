@@ -96,47 +96,95 @@ def upload_file():
                 <head>
                     <title>Championship Points Record</title>
                     <style>
-                        body { font-family: 'Roboto Slab', sans-serif; text-align: center; margin: 50px; background-color: #f8f9fa; }
-                        table { width: 80%; margin: auto; border-collapse: collapse; }
-                        th, td { border: 1px solid black; padding: 10px; }
-                        th { background-color: #834610; color: white; text-align: center; }
+                            body { 
+                                font-family: 'Roboto Slab', sans-serif; 
+                                text-align: center; 
+                                margin: 50px; 
+                                background-color: #f8f9fa; 
+                                color: #333; 
+                            }
 
-                        table { margin-bottom: 30px; }
+                            h1, h2 { 
+                                color: #013594; 
+                                margin-bottom: 20px;
+                            }
 
+                            table { 
+                                width: 80%; 
+                                margin: auto; 
+                                border-collapse: collapse; 
+                                background: white;
+                                border-radius: 5px;
+                                overflow: hidden;
+                                box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+                            }
 
-                        /* Updated button & link styles */
-                        a, input[type="submit"] {
-                            display: inline-block;
-                            padding: 10px 20px;
-                            background-color: white; /* White inside */
-                            color: #834610; /* Text color */
-                            border: 2px solid #834610; /* Border color */
-                            cursor: pointer;
-                            border-radius: 5px;
-                            font-weight: bold;
-                            text-decoration: none;
-                            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Drop shadow */
-                            transition: all 0.3s ease-in-out;
-                        }
+                            th, td { 
+                                border: 0.5px solid #ddd; 
+                                padding: 12px; 
+                                text-align: center;
+                            }
 
-                        a:hover, input[type="submit"]:hover {
-                            background-color: #f0e0d6; /* Light beige on hover */
-                            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-                        }
-                    </style>
+                            th { 
+                                background-color: #007ACC; 
+                                color: white; 
+                                font-size: 1.1em;
+                            }
+
+                            a, input[type="submit"] {
+                                display: inline-block;
+                                padding: 12px 25px;
+                                background-color: white;
+                                color: #007AFF;
+                                border: 2px solid #007AFF;
+                                cursor: pointer;
+                                border-radius: 6px;
+                                font-weight: bold;
+                                text-decoration: none;
+                                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+                                transition: all 0.3s ease-in-out;
+                            }
+
+                            a:hover, input[type="submit"]:hover {
+                                background-color: #C9E3FF!important;
+                                color: white;
+                                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+                                transform: scale(1.05);
+                            }
+
+                            form {
+                                background: white;
+                                padding: 20px;
+                                border-radius: 12px;
+                                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+                                display: inline-block;
+                                margin-top: 20px;
+                            }
+
+                            input[type="file"] {
+                                margin-bottom: 10px;
+                            }
+
+                            .error { 
+                                color: red; 
+                                font-weight: bold; 
+                                margin-top: 10px;
+                            }
+                        </style>
                 </head>
                 <body>
-                <h1>AKC Herding Trials - Championship Points Calculator</h1>
-                {% if not unique_dogs.empty %}
-                    <div style="display: flex; justify-self: center; justify-content: space-between; width: 60%; align-items: center; margin-left: 50px">
-                        <div></div>
-                        <h2 style="text-align: center;">Main Competition Results</h2>
+                    <h1>AKC Herding Trials - Championship Points Calculator</h1>
+                        
+                        {% if not unique_dogs.empty %}
+                            <div style="display: flex; justify-self: center; justify-content: space-between; width: 60%; align-items: center; margin-left: 50px">
+                            <div></div>
+                    <h2 style="text-align: center;">Main Competition Results</h2>
                         <a href="/" style="
                             text-decoration: none;
-                            color: #834610;
+                            color: #007AFF;
                             background-color: white;
                             padding: 10px 20px;
-                            border: 2px solid #834610;
+                            border: 2px solid #007AFF;
                             border-radius: 5px;
                             font-weight: bold;
                             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -173,22 +221,22 @@ def upload_file():
         <title>Championship Points Record</title>
         <style>
             body { font-family: Roboto Slab, sans-serif; text-align: center; margin: 10px; background-color: #f8f9fa; }
-            h1 { margin-top: 50px; } /* Moves the title up */
+            h1 { margin-top: 50px; color:#013594}
             form { margin-top: 10px; padding: 20px; background: white; border-radius: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
             input[type="file"] { margin-bottom: 10px; }
             /* Style for both upload buttons */
             input[type="submit"], a {
                 padding: 10px 20px;
                 background-color: white; /* White inside */
-                color: #834610; /* Text color */
-                border: 2px solid #834610; /* Border color */
+                color: #007AFF; /* Text color */
+                border: 2px solid #007AFF; /* Border color */
                 cursor: pointer;
                 border-radius: 5px;
                 font-weight: bold;
                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Drop shadow */
                 transition: all 0.3s ease-in-out;
             }
-            input[type="submit"]:hover { background-color: #FFEFE0; }
+            input[type="submit"]:hover { background-color: #C9E3FF; transform: scale(1.05);}
             .error { color: red; font-weight: bold; margin-top: 10px; }
         </style>
     </head>
