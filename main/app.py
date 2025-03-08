@@ -101,7 +101,7 @@ def upload_file():
                                 text-align: center; 
                                 margin: 50px; 
                                 background-color: #f8f9fa; 
-                                color: #333; 
+                                color: #222223; 
                             }
 
                             h1 { 
@@ -218,6 +218,7 @@ def upload_file():
             except Exception as e:
                 error_message = f"Error processing file: {str(e)}"
 
+
     return render_template_string('''
     <!doctype html>
     <html>
@@ -226,7 +227,7 @@ def upload_file():
         <title>Championship Points Record</title>
         <style>
             body { font-family: Roboto Slab, sans-serif; text-align: center; margin: 10px; background-color: #f8f9fa; }
-            h1 { margin-top: 50px; color:#003366}
+            h1 { margin-top: 50px; color:#003366} 
             form { margin-top: 10px; padding: 20px; background: white; border-radius: 10px; display: inline-block; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
             input[type="file"] { margin-bottom: 10px; }
             /* Style for both upload buttons */
